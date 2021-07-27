@@ -1,0 +1,177 @@
+:root {
+    --primary: coral;
+    --secondary: tomato;
+    --accent: rgba(255, 250, 250, 0.9);
+    --soomth: rgb(138, 43, 226);
+}
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;  
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: lighter;
+}
+a {
+    color: black;
+}
+body {
+    background-color: var(--primary);
+    --webkit-scroll-bar: var(--soomth);
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .logo {
+    width: 70%;
+}
+nav .logo h2 {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+nav .menu {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav .menu i {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(53, 51, 51);
+    cursor: pointer;
+}
+nav .user {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+nav .user i {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.mobilemenu {
+    background-color: black;
+    width: 0px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    transition: 1s;
+}
+.mobilemenu #close {
+    color: var(--accent);
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    cursor: pointer;
+
+}
+.mobilemenu ul {
+    width: 100%;
+    height: 65%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.mobilemenu ul li a {
+    color: var(--accent);
+    font-size: 20px;
+}
+.mobilemenu .social {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-around;
+    border-top: 6px solid var(--secondary);
+}
+.mobilemenu .social a i {
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 6px;
+    color: var(--accent);
+}
+
+main {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type-y: mandatory;
+}
+main .welcome {
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+main .welcome h2 {
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+main .welcome .h2 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+main .welcome p {
+    font-size: 20px;
+    color: black;
+    letter-spacing: 1.6px;
+    text-align: center;
+    margin-top: 24px;
+}
+main .welcome .scrolldown {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .welcome .scrolldown .scroll {
+    width: 250px;
+    height: 60px;
+    outline: none;
+    border: none;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .welcome .scrolldown .scroll h3 {
+    font-size: 18px;
+    font-weight: bolder;
+}
