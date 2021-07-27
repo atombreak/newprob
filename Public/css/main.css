@@ -2,7 +2,10 @@
     --primary: coral;
     --secondary: tomato;
     --accent: rgba(255, 250, 250, 0.9);
-    --soomth: rgb(138, 43, 226);
+    --soomth: #8a2be2;
+    --black: black;
+    --gradient: linear-gradient(to bottom right, rgba(0, 0, 255, 0.5),rgba(255, 0, 0, 0.5));
+    --shadows: 2px 3px 15px 3px rgba(22, 22, 22, 0.5);
 }
 * {
     padding: 0;
@@ -15,19 +18,22 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-weight: lighter;
+
 }
 a {
-    color: black;
+    color: var(--black);
 }
 body {
-    background-color: var(--primary);
-    --webkit-scroll-bar: var(--soomth);
+    background-color: var(--secondary);
+    --webkit-scroll-bar: var(--gradient);
+    position: relative;
+    width: 100%;
 }
 
 nav {
     width: 100%;
     height: 10vh;
-    background-color: var(--secondary);
+    background-image: var(--gradient);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -69,7 +75,7 @@ nav .user i {
     font-weight: bolder;
 }
 .mobilemenu {
-    background-color: black;
+    background-color: var(--black);
     width: 0px;
     height: 100vh;
     position: absolute;
@@ -89,8 +95,7 @@ nav .user i {
 }
 .mobilemenu ul {
     width: 100%;
-    height: 65%;
-    background-color: black;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -100,18 +105,19 @@ nav .user i {
 .mobilemenu ul li a {
     color: var(--accent);
     font-size: 20px;
+    letter-spacing: 1.3px;
 }
 .mobilemenu .social {
     width: 100%;
-    height: 35%;
+    height: 40%;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     justify-content: space-around;
-    border-top: 6px solid var(--secondary);
+    border-top: 6px solid blueviolet;
 }
 .mobilemenu .social a i {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bolder;
     margin: 6px;
     color: var(--accent);
@@ -129,6 +135,7 @@ main .welcome {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: var(--primary);
 }
 main .welcome h2 {
     font-size: 35px;
@@ -147,7 +154,7 @@ main .welcome .h2 {
 }
 main .welcome p {
     font-size: 20px;
-    color: black;
+    color: var(--black);
     letter-spacing: 1.6px;
     text-align: center;
     margin-top: 24px;
@@ -170,8 +177,109 @@ main .welcome .scrolldown .scroll {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    box-shadow: var(--shadows);
 }
 main .welcome .scrolldown .scroll h3 {
     font-size: 18px;
     font-weight: bolder;
+}
+.my-skills {
+    width: 100%;
+    height: auto;
+    background-color: var(--black);
+    transition: 2s;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.my-skills h2 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--black);
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    margin: 20px;
+}
+main .my-skills .scrolldown {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .my-skills .scrolldown .scroll {
+    width: 250px;
+    height: 60px;
+    outline: none;
+    border: none;
+    background-image: var(--gradient);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadows);
+}
+main .my-skills .scrolldown .scroll h3 {
+    font-size: 18px;
+    font-weight: bolder;
+}
+main .my-skills .cards {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+main .my-skills .card {
+    width: 170px;
+    height: 300px;
+    background-color: var(--black);
+    padding: 10px;
+    margin: 10px;
+}
+main .about {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: var(--gradient);
+}
+main .about h2 {
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    margin: 50px;
+}
+main .about .h2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+main .about p {
+    font-size: 20px;
+    color: var(--black);
+    letter-spacing: 1.6px;
+    text-align: center;
+    margin-top: 24px;
+}
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    color: var(--accent);
 }
